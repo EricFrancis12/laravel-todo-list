@@ -8,7 +8,7 @@ class TodoListController extends Controller
 {
     public function index()
     {
-        return view('welcome', ['listItems' => ['One', 'Two', 'Three']]);
+        return view('welcome', ['listItems' => ['One', 'Two', 'Three'], 'posts' => ['post-1', 'post-2', 'post-3']]);
     }
 
     public function markComplete($id)

@@ -904,7 +904,9 @@
 
 <body class="font-sans antialiased dark:bg-black dark:text-white/50">
     <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-        <h1>To Do List</h1>
+        <x-header title="To Do List!" class="underline">
+            <p>This is a slot</p>
+        </x-header>
 
         @foreach ($listItems as $listItem)
             <div class="flex" style="align-items: center; padding-bottom: 5px;">
@@ -926,6 +928,10 @@
             </br>
             <button type="submit">Submit</button>
         </form>
+
+        @foreach ($posts as $post)
+            <x-blog.blog-item :post="$post" />
+        @endforeach
     </div>
 </body>
 
